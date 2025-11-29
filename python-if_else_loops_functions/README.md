@@ -1,16 +1,15 @@
-Python - Import & Modules
+# Python - Import & Modules
 
-This project focuses on understanding how to:
+This project introduces the basics of using modules in Python.  
+For Task 0, the goal is to import a simple function from another file and use it inside a script.
 
-Import functions from another file
+---
 
-Use imported functions
+## 📌 Task 0: Import a simple function from a simple file
 
-Create and use modules
+The file `add_0.py` contains a function:
 
-Use the built-in function dir()
+```python
+def add(a, b):
+    return (a + b)
 
-Prevent code from executing when imported using if __name__ == "__main__"
-
-Handle command-line arguments using the sys module
-____________________________________________________________
