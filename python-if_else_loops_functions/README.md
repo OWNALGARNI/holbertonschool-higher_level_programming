@@ -1,6 +1,16 @@
-# 0-positive_or_negative.py
+Python - Import & Modules
 
-This program assigns a random signed number to the variable `number` using:
+This project focuses on understanding how to:
 
-```python
-number = random.randint(-10, 10)
+Import functions from another file
+
+Use imported functions
+
+Create and use modules
+
+Use the built-in function dir()
+
+Prevent code from executing when imported using if __name__ == "__main__"
+
+Handle command-line arguments using the sys module
+____________________________________________________________
