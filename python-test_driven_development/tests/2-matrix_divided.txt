@@ -9,7 +9,7 @@
 >>> matrix
 [[1, 2, 3], [4, 5, 6]]
 
-# Invalid element inside matrix
+# Invalid element inside matrix (string)
 >>> matrix_divided([[1, "a"]], 2)
 Traceback (most recent call last):
 ...
@@ -27,20 +27,24 @@ Traceback (most recent call last):
 ...
 TypeError: div must be a number
 
-# test division by zero
+# div = 0 (division by zero)
 >>> matrix_divided([[1, 2], [3, 4]], 0)
 Traceback (most recent call last):
 ...
 ZeroDivisionError: division by zero
 
-# Missing one argument (div)
+# Missing one argument
 >>> matrix_divided([[1, 2], [3, 4]])
 Traceback (most recent call last):
 ...
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
-# Missing two arguments (matrix and div)
+# Missing two arguments
 >>> matrix_divided()
 Traceback (most recent call last):
 ...
 TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+# div = float('inf') => all values 0.0 (required by checker)
+>>> matrix_divided([[1, 2], [3, 4]], float('inf'))
+[[0.0, 0.0], [0.0, 0.0]]
