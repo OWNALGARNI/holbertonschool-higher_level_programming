@@ -1,5 +1,6 @@
 >>> add_integer = __import__('0-add_integer').add_integer
 
+# Basic tests
 >>> add_integer(1, 2)
 3
 
@@ -12,12 +13,32 @@
 >>> add_integer(100.3, -2)
 98
 
+# Non-integer first argument
 >>> add_integer("School", 2)
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
+# Non-integer second argument
 >>> add_integer(4, "School")
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
+
+# Float overflow: inf
+>>> add_integer(float('inf'), 1)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
+# Float overflow: -inf
+>>> add_integer(float('-inf'), 1)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
+# Float NaN cannot convert
+>>> add_integer(float('nan'), 1)
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
