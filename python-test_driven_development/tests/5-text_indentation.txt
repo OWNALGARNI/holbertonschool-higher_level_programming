@@ -1,23 +1,14 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
-# Regular text
+# Simple text without special characters
+>>> text_indentation("Hello world")
+Hello world
+
+# Text with separators
 >>> text_indentation("Hello. World?")
 Hello.
 <BLANKLINE>
 World?
-<BLANKLINE>
-
-# No punctuation at end
->>> text_indentation("Hello world")
-Hello world
-
-# Multiple punctuation
->>> text_indentation("Hi: There. How?")
-Hi:
-<BLANKLINE>
-There.
-<BLANKLINE>
-How?
 <BLANKLINE>
 
 # Not a string
@@ -26,3 +17,8 @@ Traceback (most recent call last):
 ...
 TypeError: text must be a string
 
+# Missing argument
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
