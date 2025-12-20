@@ -20,11 +20,10 @@ class BaseGeometry:
         Validates that value is an integer greater than zero.
 
         Args:
-            name: The name of the value.
+            name: The name of the value to validate.
             value: The value to validate.
         """
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
-
