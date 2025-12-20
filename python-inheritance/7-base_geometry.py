@@ -1,18 +1,15 @@
 #!/usr/bin/python3
 """
-Defines a BaseGeometry class with area and integer validation
-methods.
+Defines a BaseGeometry class with an area method
+and an integer validation method.
 """
 
 
 class BaseGeometry:
-    """Represents a base geometry class."""
+    """Base class for geometry."""
 
     def area(self):
-        """
-        Raises an exception to indicate that the area
-        method is not implemented.
-        """
+        """Raises an exception because area is not implemented."""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
@@ -20,8 +17,8 @@ class BaseGeometry:
         Validates that value is an integer greater than zero.
 
         Args:
-            name: The name of the value to validate.
-            value: The value to validate.
+            name (str): The name of the value.
+            value (int): The value to validate.
         """
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
