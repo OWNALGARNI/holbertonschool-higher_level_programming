@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Defines shapes using abstract base classes and demonstrates duck typing.
+Shapes, interfaces, and duck typing.
 """
 
 from abc import ABC, abstractmethod
@@ -12,19 +12,19 @@ class Shape(ABC):
 
     @abstractmethod
     def area(self):
-        """Return the area of the shape."""
-        pass
+        """Return the area."""
+        raise NotImplementedError
 
     @abstractmethod
     def perimeter(self):
-        """Return the perimeter of the shape."""
-        pass
+        """Return the perimeter."""
+        raise NotImplementedError
 
 
 class Circle(Shape):
-    """Represents a circle."""
+    """Circle shape."""
 
-    def __init__(self, radius):
+    def __init__(self, radius=0):
         self.radius = radius
 
     def area(self):
@@ -37,9 +37,9 @@ class Circle(Shape):
 
 
 class Rectangle(Shape):
-    """Represents a rectangle."""
+    """Rectangle shape."""
 
-    def __init__(self, width, height):
+    def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
 
@@ -53,8 +53,6 @@ class Rectangle(Shape):
 
 
 def shape_info(shape):
-    """
-    Print area and perimeter using duck typing.
-    """
-    print("Area:", shape.area())
-    print("Perimeter:", shape.perimeter())
+    """Print area and perimeter using duck typing."""
+    print(f"Area: {shape.area()}")
+    print(f"Perimeter: {shape.perimeter()}")
