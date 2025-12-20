@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Defines a class MyList that inherits from list and provides
-a method to print the list in sorted order.
+Defines a class MyList that inherits from list
+and provides a method to print the list sorted.
 """
 
 
