@@ -9,7 +9,7 @@ items_path = Path(__file__).parent / "items.json"
 def items():
     with open(items_path) as f:
         data = json.load(f)
-        items_list = data["items"]
+        items_list = data.get("items", [])
     return render_template('items.html', items=items_list)
 
 if __name__ == '__main__':
