@@ -12,3 +12,5 @@ def items():
         items_list = data["items"]
     return render_template('items.html', items=items_list)
 
+if __name__ == '__main__':
+    app.run(port=5000)
